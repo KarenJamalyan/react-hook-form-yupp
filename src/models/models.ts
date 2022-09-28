@@ -1,12 +1,31 @@
 export interface UserState {
-    loading: boolean;
-    error: null | string;
+    users: IUser[];
+    currentUser: IUser | null;
 }
 
 export interface IInput {
     type: string;
-    text: string;
-    onChange: any;
-    value: string;
+    placeholder: string;
+    register: any;
+    txt: string;
+    error?: string;
     name: string;
+}
+
+export interface IButton {
+    error?: string;
+    disabled: boolean;
+}
+
+export interface IUser {
+    firstName: string;
+    lastName: string;
+    age: number;
+    email: string;
+    password: string;
+}
+
+export interface ILogin {
+    email: string;
+    password: string;
 }
